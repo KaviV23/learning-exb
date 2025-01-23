@@ -1,0 +1,2 @@
+platform,arch,machine_type,cpu_model,gpu_model,total_memory(bytes),username,hostname,platform_release,uptime,version
+win32,x64,x86_64,Intel(R) Core(TM) i5-10210U CPU @ 1.60GHz," Intel(R) UHD Graphics ",8339001344,Kaviraj,P375-Kaviraj,10.0.22631,824948.687,Windows 11 Pro
