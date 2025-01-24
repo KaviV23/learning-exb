@@ -99,5 +99,26 @@ which bash
 
 ### Creating first bash script
 
-Link: --Github--
+Link: [Github](https://github.com/KaviV23/learning-exb/tree/main/shell-scripting/bash)  
+File: [run_all.sh](./run_all.sh)
+
+```
+#!/bin/bash
+where bash
+echo "Today is " `date`
+
+echo -e "\nenter the path to directory"
+read the_path
+
+echo -e "\nyour path has the following files and folders:"
+ls $the_path
+```
+
+Things used:
+1. echo
+2. date
+3. backticks (``)
+4. read
+5. ls
+
 
