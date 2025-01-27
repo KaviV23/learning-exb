@@ -86,3 +86,22 @@ To write scripts, open any text editor, type the commands and save it with a `.p
 Write-Host "All commands that act on Host:"
 Get-Command -Noun Host
 ```
+
+*Running the script:*
+
+```
+.\host-commands.ps1
+```
+
+`.\` - look in the current directory  
+`host-commands.ps1` - script name
+
+# Recap Quiz (Answers)
+- Command for clearing terminal = `Clear-Host`
+- Powershell commands are called `CmdLets`. Each command follow the `Verb`-`Noun` format.
+- Powershell is NOT limited to Windows. Can be installed on MacOS and Linux
+- `Get-Date` for getting current date.
+- Ways to retrieve command history: `Get-History` and pressing `Up Arrow` or `Down Arrow` keys on keyboard.
+- `Tab` for command completion.
+- Use powershell scripts for automating repetitive tasks
+- `.\` to run PS scripts in current directory
