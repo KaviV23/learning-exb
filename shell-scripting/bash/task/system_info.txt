@@ -1,0 +1,41 @@
+===MEMORY INFO===
+MemTotal:        4010348 kB
+MemFree:         2714308 kB
+MemAvailable:    3329264 kB
+
+===STORAGE INFO===
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           392M  632K  392M   1% /run
+/dev/vda2        59G  3.9G   53G   7% /
+tmpfs           2.0G     0  2.0G   0% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+tmpfs           392M   20K  392M   1% /run/user/0
+
+===OPERATING SYSTEM INFO===
+PRETTY_NAME="Ubuntu 24.04.1 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.1 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
+ Static hostname: kavi-vps
+       Icon name: computer-vm
+         Chassis: vm 🖴
+      Machine ID: 4e48a2b5ee55adff72a6b4cbd684803f
+         Boot ID: f877b0aec32d458aa47254a3ea9090ed
+  Virtualization: kvm
+Operating System: Ubuntu 24.04.1 LTS
+          Kernel: Linux 6.8.0-51-generic
+    Architecture: x86-64
+ Hardware Vendor: Red Hat
+  Hardware Model: KVM
+Firmware Version: 1.16.3-2.el9
+   Firmware Date: Tue 2014-04-01
+    Firmware Age: 10y 9month 3w 6d

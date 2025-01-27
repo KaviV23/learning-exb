@@ -120,5 +120,3 @@ Things used:
 3. backticks (``)
 4. read
 5. ls
-
-
