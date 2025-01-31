@@ -1,4 +1,4 @@
-fileName=system_info.txt
+fileName="$HOME/system_info.txt"
 
 echo "===MEMORY INFO===" > $fileName
 echo "$(cat /proc/meminfo | grep Mem)" >> $fileName
