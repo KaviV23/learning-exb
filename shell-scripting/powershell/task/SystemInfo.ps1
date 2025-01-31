@@ -17,4 +17,4 @@ $AllInfo += "Total Disk Space: " + ([math]::Round(($CDriveInfo.Used / 1024 / 102
 $AllInfo += "Available Disk Space: " + ([math]::Round(($CDriveInfo.Free / 1024 / 1024 / 1024), 2)) + " GB" + "`n"
 
 Write-Host $AllInfo
-$AllInfo | Out-File -FilePath "C:\Users\Kaviraj\code\learning-exb\shell-scripting\powershell\task\System_Info.txt"
+$AllInfo | Out-File -FilePath ("C:" + $Env:HOMEPATH + "\SystemInfo.txt")
