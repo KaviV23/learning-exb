@@ -1,0 +1,3 @@
+[submodule "containerization/single-container/sample-nodejs-EXB"]
+	path = containerization/single-container/sample-nodejs-EXB
+	url = https://github.com/KaviV23/sample-nodejs-EXB
