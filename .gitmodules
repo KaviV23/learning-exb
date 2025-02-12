@@ -1,3 +1,0 @@
-[submodule "containerization/single-container/sample-nodejs"]
-	path = containerization/single-container/sample-nodejs
-	url = https://github.com/digitalocean/sample-nodejs
