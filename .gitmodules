@@ -4,3 +4,6 @@
 [submodule "containerization/single-container/Django-Website-EXB"]
 	path = containerization/single-container/Django-Website-EXB
 	url = git@github.com:KaviV23/Django-Website-EXB.git
+[submodule "containerization/multi-container/MERN-docker-compose-EXB"]
+	path = containerization/multi-container/MERN-docker-compose-EXB
+	url = https://github.com/KaviV23/MERN-docker-compose-EXB
