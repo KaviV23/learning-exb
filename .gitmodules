@@ -1,3 +1,6 @@
 [submodule "containerization/single-container/sample-nodejs-EXB"]
 	path = containerization/single-container/sample-nodejs-EXB
 	url = https://github.com/KaviV23/sample-nodejs-EXB
+[submodule "containerization/single-container/Django-Website-EXB"]
+	path = containerization/single-container/Django-Website-EXB
+	url = git@github.com:KaviV23/Django-Website-EXB.git
