@@ -25,8 +25,6 @@ async function fetchSysInfo() {
     };
 }
 
-// console.log(systemInfo.gpuModel.then((value) => console.log(value)));
-
 fetchSysInfo().then(() => {
     /*
     
