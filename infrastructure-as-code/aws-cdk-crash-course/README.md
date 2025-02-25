@@ -59,7 +59,7 @@ const L1Bucket = new CfnBucket(this, "TestL1Bucket", {
 });
 
 const L2Bucket = new Bucket(this, "TestL2Bucket", {
-    bucketName: "TestL2Bucket2902834", // has to be unique
+    bucketName: "testl2bucket2902834", // has to be unique
     versioned: true
 });
 ```
