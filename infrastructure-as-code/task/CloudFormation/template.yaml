@@ -5,7 +5,7 @@ Resources:
   EC2:
     Type: AWS::EC2::Instance
     Properties:
-      ImageId: '/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2'
+      ImageId: 'ami-00b94073831733d2e'
       InstanceType: t2.micro
 
   VPC:
