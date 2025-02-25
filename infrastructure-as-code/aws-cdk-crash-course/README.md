@@ -10,10 +10,10 @@ Video link: [YouTube](https://youtu.be/D4Asp5g4fp8?si=QfolYIjcrEQZC6Am)
 
 ## Prerequisites:
 
-1. Node.js - [Node.js](https://nodejs.org/en/download)
-2. AWS CLI - [AWS Docs](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
-3. CDK - `npm install -g aws-cdk`
-4. TypeScript - `npm -g install typescript`
+1. Node.js - [Download](https://nodejs.org/en/download) - Node.js.
+2. AWS CLI - [Download](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) - AWS Docs.
+3. CDK - `npm install -g aws-cdk`.
+4. TypeScript - `npm -g install typescript`.
 5. Configure `aws-cli` credentials:  
     1. Set-up IAM user to access AWS from AWS CLI. Give it Programitic access. **Root user is NOT RECOMMENDED**.
     2. Generate credentials. Run `aws configure` and enter in generated public/private keys.
@@ -28,7 +28,7 @@ cdk init app --language typescript
 This generates the following file structure:
 
 - `./bin/*_app.ts` - One app file per project. Defines one or more stacks.
-- `./bin/*_app-stack.ts` - Can have multiple stack files. Contains constructs
+- `./bin/*_app-stack.ts` - Can have multiple stack files. Contains constructs.
 
 *A few `cdk` commands:*
 
