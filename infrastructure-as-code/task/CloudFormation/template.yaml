@@ -1,0 +1,17 @@
+AWSTemplateFormatVersion: 2025-02-25
+Description: Tempate for Provisioning EC2 and VPC Instance
+
+Resources:
+  EC2:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: '/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2'
+      InstanceType: t2.micro
+
+  VPC:
+    Type: AWS::EC2::VPC
+    Properties:
+      CidrBlock: 192.168.1.0/24
+      
+
+
