@@ -1,8 +1,3 @@
-# CloudFormation Task
-
-Template for Provision VPC and EC2 on AWS
-
-```
 AWSTemplateFormatVersion: "2010-09-09"
 Description: Tempate for Provisioning EC2 and VPC Instance
 
@@ -27,16 +22,4 @@ Resources:
       ImageId: ami-00b94073831733d2e
       InstanceType: t2.micro
       SubnetId: !Ref Subnet
-```
 
-## Deploy the Stack
-
-```
-aws cloudformation create-stack --stack-name CF-VPC-EC2 --template-body file://CF-VPC-EC2-Template.yaml
-```
-
-## Delete the Stack
-
-```
-aws cloudformation delete-stack --stack-name CF-VPC-EC2 
-```
