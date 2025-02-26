@@ -1,3 +1,8 @@
+# Terraform Task
+
+Provisioning a VPC and EC2 Instance on AWS using Terraform
+
+```
 terraform {
 	required_providers {
 		aws = {
@@ -27,3 +32,30 @@ resource "aws_instance" "tfTestEc2" {
 	instance_type = "t2.micro"
 	subnet_id = aws_subnet.tfTestSubnet.id
 }
+```
+
+## Deploy the Stack
+
+Initialize terraform to download the necessary providers:
+
+```
+terraform init
+```
+
+(Optional) Preview changes:
+
+```
+terraform plan
+```
+
+Deploy the stack:
+
+```
+terraform apply
+```
+
+## Take Down the Stack
+
+```
+terraform destroy
+```
