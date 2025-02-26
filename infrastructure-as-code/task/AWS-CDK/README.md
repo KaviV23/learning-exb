@@ -1,14 +1,36 @@
-# Welcome to your CDK TypeScript project
+# AWS CDK Task
 
-This is a blank project for CDK development with TypeScript.
+Constructs for Provisioning VPC and EC2 on AWS
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+```
+const VPC = new ec2.Vpc(this, "CdkTestVPC", {
+    cidr: "10.0.0.0/16",
+    natGateways: 1,
+});
 
-## Useful commands
+const EC2 = new ec2.Instance(this, "CdkTestEC2", {
+    vpc: VPC,
+    instanceType: ec2.InstanceType.of(ec2.InstanceClass.T2, ec2.InstanceSize.MICRO),
+    machineImage: ec2.MachineImage.latestAmazonLinux2(),
+})
+```
 
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `npx cdk deploy`  deploy this stack to your default AWS account/region
-* `npx cdk diff`    compare deployed stack with current state
-* `npx cdk synth`   emits the synthesized CloudFormation template
+## Deploy the Stack
+
+Before deploying the stack, ensure CDKToolkit is bootstrapped:
+
+```
+cdk bootstrap
+```
+
+Then deploy the stack with the following command:
+
+```
+cdk deploy
+```
+
+## Take Down the Stack
+
+```
+cdk destroy
+```

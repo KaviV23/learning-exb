@@ -1,8 +1,5 @@
 import * as cdk from 'aws-cdk-lib';
-import { Ec2Action } from 'aws-cdk-lib/aws-cloudwatch-actions';
-import { AmazonLinuxImage, Instance, InstanceArchitecture, InstanceClass, InstanceSize, Vpc } from 'aws-cdk-lib/aws-ec2';
-import { InstanceProfile } from 'aws-cdk-lib/aws-iam';
-import { InstanceType } from 'aws-cdk-lib/aws-rds';
+import * as ec2 from 'aws-cdk-lib/aws-ec2';
 import { Construct } from 'constructs';
 // import * as sqs from 'aws-cdk-lib/aws-sqs';
 
@@ -17,14 +14,15 @@ export class AwsCdkStack extends cdk.Stack {
     //   visibilityTimeout: cdk.Duration.seconds(300)
     // });
 
-    const VPC = new Vpc(this, "CdkTestVPC", {
-      cidr: "10.0.0.0/16"
+    const VPC = new ec2.Vpc(this, "CdkTestVPC", {
+      cidr: "10.0.0.0/16",
+      natGateways: 1,
     });
 
-    const EC2 = new Instance(this, "CdkTestEC2", {
-      instanceType: cdk.aws_ec2.InstanceType.of(InstanceClass.T2, InstanceSize.MICRO),
-      machineImage: new AmazonLinuxImage(),
+    const EC2 = new ec2.Instance(this, "CdkTestEC2", {
       vpc: VPC,
+      instanceType: ec2.InstanceType.of(ec2.InstanceClass.T2, ec2.InstanceSize.MICRO),
+      machineImage: ec2.MachineImage.latestAmazonLinux2(),
     })
   }
 }
