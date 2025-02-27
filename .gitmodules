@@ -7,3 +7,6 @@
 [submodule "containerization/multi-container/MERN-docker-compose-EXB"]
 	path = containerization/multi-container/MERN-docker-compose-EXB
 	url = https://github.com/KaviV23/MERN-docker-compose-EXB
+[submodule "code-pipelines/aws-codepipeline/react-101-EXB"]
+	path = code-pipelines/aws-codepipeline/react-101-EXB
+	url = https://github.com/KaviV23/react-101-EXB
