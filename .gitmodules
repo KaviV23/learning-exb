@@ -11,5 +11,5 @@
 	path = code-pipelines/aws-codepipeline/react-101-EXB
 	url = https://github.com/KaviV23/react-101-EXB
 [submodule "code-pipelines/learn-github-actions"]
-	path = code-pipelines/learn-github-actions
+	path = code-pipelines/github-actions/learn-github-actions
 	url = git@github.com:KaviV23/learn-github-actions.git
