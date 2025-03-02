@@ -13,3 +13,6 @@
 [submodule "code-pipelines/learn-github-actions"]
 	path = code-pipelines/github-actions/learn-github-actions
 	url = git@github.com:KaviV23/learn-github-actions.git
+[submodule "code-pipelines/jenkins/task/jenkins-ci-cd-test"]
+	path = code-pipelines/jenkins/task/jenkins-ci-cd-test
+	url = git@github.com:KaviV23/jenkins-ci-cd-test.git
