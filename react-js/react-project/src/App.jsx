@@ -9,8 +9,18 @@ const App = () => {
       <Pizza
         name="Hawaiian Pizza"
         description="Pizza served with pizza sauce, pepperonis and pineapple."
+        image="/public/pizzas/hawaiian.webp"
       />
-      <Pizza name="Satay Pizza" description="Satay flaboured pizza" />
+      <Pizza
+        name="BBQ Pizza"
+        description="Pizza served with pizza sauce, pepperonis and pineapple."
+        image="/public/pizzas/bbq_ckn.webp"
+      />
+      <Pizza
+        name="Mexicana Pizza"
+        description="Pizza served with pizza sauce, pepperonis and pineapple."
+        image="/public/pizzas/mexicana.webp"
+      />
     </div>
   );
   //   React.createElement("div", {}, [

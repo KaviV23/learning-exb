@@ -7,4 +7,4 @@ Course's GitHub repo: [btholt/citr-v9-project](https://github.com/btholt/citr-v9
 
 1. [No frills React setup](./01-NO-FRILLS-REACT.md)
 2. [Tools](02-TOOLS.md)
-2. [JSX in React](03-JSX.md)
+3. [JSX in React](03-JSX.md)

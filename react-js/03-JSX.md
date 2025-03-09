@@ -93,3 +93,75 @@ root.render(<App />);
 Don't forget to update `Pizza.js` to `Pizza.jsx` aswell. 
 
 Also change the module import script in `index.html` to match the newly renamed `App.jsx` file.
+
+## Setting Up API for Testing with React
+
+API Server available in this [GitHub Repo](https://github.com/btholt/citr-v9-project).
+
+- Fastify
+- SQLite DB
+
+### Get It Up and Running
+
+CD into the repository and run the following:
+
+```
+npm install
+```
+
+Once thats done, run the API Server:
+
+```
+npm run dev
+```
+
+### Configuring Vite as Proxy Server
+
+Open `vite.config.js` and add a new section in the `defineConfig`:
+
+```
+export default defineConfig({
+  server: {
+    proxy: {
+      "/api": {
+        target: "http://localhost:3000",
+        changeOrigin: true
+      },
+      "/public": {
+        target: "http://localhost:3000",
+        changeOrigin: true
+      },
+    },
+  },
+  plugins: [react()],
+});
+```
+
+Now all requests made on the `/api` and `/public` endpoint on your Vite server will proxy requests to the API server.
+
+## Setting Up Static Assets
+
+Here we will be setting up images and stylesheets
+
+Add stylesheet to `index.html` under the `<head>` tag:
+
+```
+<link rel="stylesheet" href="/public/style.css">
+```
+
+Then, through the proxy we've set up earlier, we can access images stored on the API server at `/public/pizzas/*`. Add images to the pizzas by modifying the `Pizza` component to add an `img` element with props for the image source.
+
+```
+# Pizza.jsx
+<div className="pizza">
+  <img src={props.image} alt={props.name} />
+...
+</div>
+
+# App.jsx
+<Pizza
+  name="Hawaiian Pizza"
+  description="Pizza served with pizza sauce, pepperonis and pineapple."
+  image="/public/pizzas/hawaiian.webp"
+/>
+```
