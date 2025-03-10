@@ -1,39 +1,24 @@
-// import React from "react";
-import { createRoot } from "react-dom";
-import Pizza from "./Pizza.jsx";
+import { createRoot } from "react-dom/client";
+import Order from "./Order";
+import { StrictMode, useState } from "react";
+import PizzaOfTheDay from "./PizzaOfTheDay";
+import Header from "./Header";
+import { CartContext } from "./contexts";
 
 const App = () => {
+  const cartHook = useState([]);
+
   return (
-    <div>
-      <h1>Padre Gino's - Order Now</h1>
-      <Pizza
-        name="Hawaiian Pizza"
-        description="Pizza served with pizza sauce, pepperonis and pineapple."
-        image="/public/pizzas/hawaiian.webp"
-      />
-      <Pizza
-        name="BBQ Pizza"
-        description="Pizza served with pizza sauce, pepperonis and pineapple."
-        image="/public/pizzas/bbq_ckn.webp"
-      />
-      <Pizza
-        name="Mexicana Pizza"
-        description="Pizza served with pizza sauce, pepperonis and pineapple."
-        image="/public/pizzas/mexicana.webp"
-      />
-    </div>
+    <StrictMode>
+      <CartContext.Provider value={cartHook}>
+        <div>
+          <Header />
+          <Order />
+          <PizzaOfTheDay />
+        </div>
+      </CartContext.Provider>
+    </StrictMode>
   );
-  //   React.createElement("div", {}, [
-  //   React.createElement("h1", {}, "Padre Gino's"),
-  //   React.createElement(Pizza, {
-  //     name: "Hawaiian Pizza",
-  //     description: "Pizza served with pizza sauce, pepperonis and pineapple.",
-  //   }),
-  //   React.createElement(Pizza, {
-  //     name: "Satay Pizza",
-  //     description: "Satay flaboured pizza",
-  //   }),
-  // ]);
 };
 
 const container = document.getElementById("root");
